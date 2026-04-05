@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3, 
+  "name": "Page Analyzer",
+  "version": "1.0",
+  "description": "Analyze any web page for its title, description, headers and links.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
