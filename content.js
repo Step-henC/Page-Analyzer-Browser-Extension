@@ -4,7 +4,7 @@ function analyzePage() {
   const headings = [...document.querySelectorAll("h1, h2, h3")].map((h) => {
     return h.innerText.trim();
   });
-  const links = [...document.querySelectorAll("a")].map((l) => l.textContent.trim());
+  const links = [...document.querySelectorAll("a")].map(el => el.outerHTML);
 
   return {
     title,
